@@ -10,7 +10,7 @@ use \Iterator as Iterator;
 
 class Storage extends StorageIterator implements StorageInterface {
 
-	private Table|null $table = null;
+	protected Table|null $table = null;
 
 	public function __construct() {
 		if ($this->table === null) {
