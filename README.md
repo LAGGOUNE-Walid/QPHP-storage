@@ -5,7 +5,10 @@ This library is built to work with queue php swoole server. but it is available 
 ## Requirements
 - PHP > 8.0.2
 - swoole > 4.8
-
+## Install
+```
+composer require qphpstorage/qphpstorage
+```
 ## Example
 ```php
 <?php
