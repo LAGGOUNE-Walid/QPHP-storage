@@ -1,4 +1,9 @@
 {
+    "name": "qphpstorage/qphpstorage",
+    "description": "A simple wrapper around swoole4 table storage, with casting.",
+    "keywords": ["swoole", "storage", "library"],
+    "type": "library",
+    "license": "MIT",
     "require": {
         "php": "^8.0.2"
     },
