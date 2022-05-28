@@ -1,6 +1,6 @@
 ## QPHP-storage
 A simple storage library uses swoole table. <br/>
-This library is build to work with queue php swoole server. but it is available as component to use it whenever you want.
+This library is built to work with queue php swoole server. but it is available as component to use it whenever you want.
 
 ## Requirements
 - PHP > 8.0.2
