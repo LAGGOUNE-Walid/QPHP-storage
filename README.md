@@ -20,13 +20,13 @@ use QPStorage\Casts\JsonCast;
 class UserStorage extends Storage {
 
 	// Required
-	public string $name 		= 	"users";
+	public string $name 	= 	"users";
 	// Required
-	public int $size 			= 	1024;
+	public int $size	= 	1024;
 	// Required
 	public array $definitions 	= [
-		"id" 		=> 		[Swoole\Table::TYPE_INT],
-		"name" 		=> 		[Swoole\Table::TYPE_STRING, 64],
+		"id" 			=> 		[Swoole\Table::TYPE_INT],
+		"name" 			=> 		[Swoole\Table::TYPE_STRING, 64],
 		"options" 		=> 		[Swoole\Table::TYPE_STRING, 64]
 	];
 	// Optional , if you do not need it , remove the property
@@ -48,7 +48,7 @@ $users->put("bar", ["id" => 2, "name" => "bar", "options" => ["age" => 24]]);
 
 echo $users->get("foo")->options["age"];
 // Loop over users
-
+echo "Count : ".$users->count()."\n";
 $users->rewind();
 while($users->valid()) {
 	$user = $users->current();

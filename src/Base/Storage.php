@@ -74,4 +74,8 @@ class Storage extends StorageIterator implements StorageInterface {
 		return $data;
 	}
 
+	public function count() : int {
+		return $this->table->count();
+	}
+
 }
