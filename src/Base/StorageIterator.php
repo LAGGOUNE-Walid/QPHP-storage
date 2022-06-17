@@ -16,7 +16,7 @@ class StorageIterator implements Iterator {
 
 	public function current() {
 		$data = $this->wrapp($this->table->current(), "GET");
-		return (object)(($data === false) ? [] : $data);
+		return (object)(($data === false) ? [] : $this->createModel($data));
 	}
 
 	public function key() {

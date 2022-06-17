@@ -36,7 +36,7 @@ class Storage extends StorageIterator implements StorageInterface {
 
 	public function get(string $key) : object {
 		$data = $this->wrapp($this->table->get($key), "GET");
-		return (object)(($data === false) ? [] : $data);
+		return (object)(($data === false) ? [] : $this->createModel($data));
 	}
 
 	public function has(string $key) : bool {
@@ -70,8 +70,14 @@ class Storage extends StorageIterator implements StorageInterface {
 				}
 			}
 		}
-
 		return $data;
+	}
+
+	public function createModel(array $data) : object {
+		foreach($this->definitions as $columnName => $options) {
+			$this->{$columnName} = $data[$columnName];
+		}
+		return $this;
 	}
 
 	public function count() : int {
